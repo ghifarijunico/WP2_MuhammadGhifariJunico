@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Website Sederhana</title>
+  <style>
+    /* CSS styling untuk tampilan web */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+    
+    header {
+      background-color: #333333;
+      padding: 20px;
+      color: #ffffff;
+      text-align: center;
+    }
+    
+    nav {
+      background-color: #666666;
+      padding: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+    
+    main {
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 20px;
+    }
+    
+    footer {
+      background-color: #333333;
+      padding: 20px;
+      color: #ffffff;
+      text-align: center;
+    }
+    
+    .slideshow {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+    }
+    
+    .slideshow img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.3s ease-in-out;
+    }
+  </style>
+  <script>
+    // JavaScript untuk mengganti gambar slideshow tiap beberapa detik
+    document.addEventListener('DOMContentLoaded', function() {
+      var images = [
+        'gambar1.jpg',
+        'gambar2.jpg',
+        'gambar3.jpg'
+      ];
+      var currentIndex = 0;
+      var imgElement = document.getElementById('slideshow-img');
+
+      setInterval(function() {
+        currentIndex = (currentIndex + 1) % images.length;
+        imgElement.src = images[currentIndex];
+      }, 3000); // Ganti gambar setiap 3 detik (3000 milidetik)
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Selamat Datang di Contoh Website Sederhana</h1>
+  </header>
+  
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Tentang Kami</a>
+    <a href="#">Produk</a>
+    <a href="#">Kontak</a>
+  </nav>
+  
+  <main>
+    <div class="slideshow">
+      <img id="slideshow-img" src="gambar1.jpg" alt="Slideshow Gambar">
+    </div>
+    
+    <h2>Selamat datang di Contoh Website Sederhana!</h2>
+    <p>Ini adalah contoh sebuah website sederhana yang menggunakan HTML, CSS, dan JavaScript. Website ini terdiri dari beberapa bagian dasar, seperti header, navigasi, konten utama, dan footer.</p>
+    <p>Anda dapat menggunakan contoh ini sebagai dasar untuk mempelajari dan memahami struktur dasar pembuatan sebuah website. Selanjutnya, Anda bisa mengembangkan website ini dengan menambahkan halaman lain, fitur interaktif, atau desain yang lebih kompleks.</p>
+  </main>
+  
+  <footer>
+    <p>Hak Cipta &copy; 2023 Contoh Website Sederhana. All rights reserved.</p>
+  </footer>
+</body>
+</html>
